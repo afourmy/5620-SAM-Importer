@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+*                       XML Example for 5620 SAM 13.0R1
+*
+*   Sample Name: Find.xml
+*
+*   Description: This example demonstrates a find request to retrieve information
+*                          about all managed NEs.
+*		      A result filter is used to specify that only the objectFullName and siteId 
+*                         should be returned. 
+*
+*   Preconditions: 1. None.         
+*
+*   Notes: 1. None 
+* 
+*************************************************************************
+*   Copyright (c) 2014 Alcatel-Lucent.  All rights reserved.
+*   For Alcatel-Lucent disclaimer, refer to AlcatelLucentDisclaimer.txt
+*
+**************************************************************************
+-->
+<SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP:Header>
+    <header xmlns="xmlapi_1.0">
+      <security>
+        <user>admin</user>
+        <password hashed="false">5620Sam!</password>
+      </security>
+      <requestID>client1:0</requestID>
+    </header>  
+  </SOAP:Header>
+  <SOAP:Body>
+    <find xmlns="xmlapi_1.0">
+      <fullClassName>netw.PhysicalLinks</fullClassName>
+      <resultFilter>
+
+<attribute>name</attribute> 
+<attribute>objectFullName</attribute> 
+<attribute>deploymentState</attribute> 
+<attribute>isLagMember</attribute> 
+<attribute>endPointALagMembershipId</attribute> 
+<attribute>endPointBLagMembershipId</attribute> 
+<attribute>description</attribute> 
+<attribute>displayedName</attribute> 
+<attribute>endpointAPointer</attribute>
+<attribute>endpointBPointer</attribute>
+<attribute>endpointAName</attribute> 
+<attribute>endpointBName</attribute> 
+<attribute>gneInterfaceEndpointAPointer</attribute> 
+<attribute>gneInterfaceEndpointBPointer</attribute> 
+<attribute>linkDirection</attribute> 
+<attribute>portTerminationEndpointAPointer</attribute> 
+<attribute>portTerminationEndpointBPointer</attribute>
+<attribute>endPointASiteId</attribute> 
+<attribute>endPointASiteName</attribute> 
+<attribute>endPointASiteType</attribute> 
+<attribute>endPointAChassisId</attribute> 
+<attribute>endPointAChassisType</attribute> 
+<attribute>endPointAPortId</attribute>
+<attribute>endPointBSiteId</attribute> 
+<attribute>endPointBSiteName</attribute> 
+<attribute>endPointBSiteType</attribute>  
+<attribute>endPointBChassisId</attribute> 
+<attribute>endPointBChassisType</attribute> 
+<attribute>endPointBPortId</attribute> 
+<attribute>endpointBSubnetPointer</attribute> 
+<attribute>linkDiscoveredFrom</attribute> 
+<attribute>linkType</attribute> 
+<attribute>physicalLinkScope</attribute> 
+<attribute>physicalinkPointers</attribute> 
+<attribute>underlyingEndpointAPhysLinkPointer</attribute> 
+<attribute>underlyingEndpointBPhysLinkPointer</attribute> 
+<attribute>isLagMember</attribute> 
+<attribute>endPointALagMembershipId</attribute> 
+<attribute>endPointBLagMembershipId</attribute>  
+<attribute>unManagedNodeEndPoint</attribute>
+<children /> 
+</resultFilter>
+
+    </find>
+  </SOAP:Body>
+</SOAP:Envelope>

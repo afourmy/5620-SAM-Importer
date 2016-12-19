@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+*                       XML Example for 5620 SAM 13.0R1
+*
+*   Sample Name: Find.xml
+*
+*   Description: This example demonstrates a find request to retrieve information
+*                          about all managed NEs.
+*		      A result filter is used to specify that only the objectFullName and siteId 
+*                         should be returned. 
+*
+*   Preconditions: 1. None.         
+*
+*   Notes: 1. None 
+* 
+*************************************************************************
+*   Copyright (c) 2014 Alcatel-Lucent.  All rights reserved.
+*   For Alcatel-Lucent disclaimer, refer to AlcatelLucentDisclaimer.txt
+*
+**************************************************************************
+-->
+<SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+  <SOAP:Header>
+    <header xmlns="xmlapi_1.0">
+      <security>
+        <user>admin</user>
+        <password hashed="false">5620Sam!</password>
+      </security>
+      <requestID>client1:0</requestID>
+    </header>  
+  </SOAP:Header>
+  <SOAP:Body>
+    <find xmlns="xmlapi_1.0">
+      <fullClassName>equipment.PhysicalPort</fullClassName>
+      <resultFilter>
+        <attribute>objectFullName</attribute>
+        <attribute>deploymentState</attribute>
+        <attribute>name</attribute>
+        <attribute>portId</attribute>
+        <attribute>portName</attribute>
+        <attribute>displayedName</attribute>
+        <attribute>siteId</attribute>
+        <attribute>siteName</attribute>
+        <attribute>olcState</attribute>
+        <attribute>shelfId</attribute>
+        <attribute>isEquipped</attribute>
+        <attribute>isEquipmentInserted</attribute>
+        <attribute>administrativeState</attribute>
+        <attribute>equipmentState</attribute>
+        <attribute>speed</attribute>
+        <attribute>actualSpeed</attribute>
+        <attribute>description</attribute>
+        <attribute>encapType</attribute>
+        <attribute>macAddress</attribute>
+        <attribute>isLinkUp</attribute>
+        <attribute>operationalMTU</attribute>
+        <attribute>portCategory</attribute>
+        <attribute>portClass</attribute>
+        <attribute>cardSlotId</attribute>
+        <attribute>daughterCardSlotId</attribute>
+        <attribute>isEnabled</attribute>
+        <attribute>isPrimaryLagMember</attribute>
+        <attribute>lagMembershipId</attribute>
+        <attribute>portAccessDescription</attribute>
+        <attribute>vlan</attribute>
+        <attribute>vplsMode</attribute>
+	   <attribute>isPortNNI</attribute>
+<children/> 
+      </resultFilter>
+    </find>
+  </SOAP:Body>
+</SOAP:Envelope>
